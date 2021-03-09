@@ -1,5 +1,9 @@
 ﻿// ConsoleApplication11.3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+<<<<<<< HEAD
 //Урок 11.Задача 3. Immolate Improved. 
+=======
+//Урок 11.Задача 3. Immolate Improved.
+>>>>>>> 9bd1c4aeef42aba8be7a5448d5e069308e57b9ef
 
 #include <iostream>
 #include<locale.h>
@@ -9,16 +13,29 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	float power, health, resistanceIndex;
+<<<<<<< HEAD
 	cout << "\nУкажите количество здоровья Орка от 0 до 1  ";
 	cin >> health;
 	if (health < 0 || health>1) {
 		cout << "\nУкажите правильно количество здоровья Орка";
+=======
+	float power, health, resistanceIndex;
+	cout << "\nУкажите количество здоровья Орка от 0 до 1  ";
+	cin >> health;
+	if (health < 0 || health>1) {
+		cout << "\nУкажите правильно количество здоровья Орка от 0 до 1";
+>>>>>>> 9bd1c4aeef42aba8be7a5448d5e069308e57b9ef
 	}
 	cout << "\nУкажите сопротивляемость магии Орка от 0 до 1  ";
 	cin >> resistanceIndex;
 	if (resistanceIndex < 0 || resistanceIndex>1) {
 		cout << "\nУкажите правильно сопротивляемость магии Орка ";
 	}
+<<<<<<< HEAD
+=======
+		if (health >= 0 && health <= 1 && resistanceIndex >= 0 && resistanceIndex <= 1) {
+		
+>>>>>>> 9bd1c4aeef42aba8be7a5448d5e069308e57b9ef
 	if (health >= 0 && health <= 1 && resistanceIndex >= 0 && resistanceIndex <= 1) {
 		do {
 			cout << "\nУкажите мощность огненного шара от 0 до 1  ";
@@ -26,6 +43,7 @@ int main()
 			if (power < 0 || power>1) {
 				cout << "\nУкажите правильно мощность огненного шара."; break;
 			}
+<<<<<<< HEAD
 			power*= 1-resistanceIndex;
 			cout << "\nВ результате выстрела Орку нанесён урон здоровью " << power;
 health -= power;
@@ -39,6 +57,25 @@ if (health < 0.00001) {
 				cout << "\n\n                Орк погиб!";
 			}
 		} while (health >0.);
+=======
+				
+				power *= 1 - resistanceIndex;
+				cout << "\nВ результате выстрела Орку нанесён урон здоровью " << power;
+				cout << "\nУ Орка осталось " << health - power << " очков здоровья";
+				health -= power;
+				if (health <= 0.) {
+			
+				 power*=1- resistanceIndex ;
+				 cout << "\nВ результате выстрела Орку нанесён урон здоровью " << power;
+				cout << "\nУ Орка осталось " << health-  power << " очков здоровья";
+				health -= power;
+			if (health <= 0.) {
+				cout << "\n\n                Орк погиб!";
+			}
+		} while (health >= 0.);
+
+		} while (health >= 0.);
+>>>>>>> 9bd1c4aeef42aba8be7a5448d5e069308e57b9ef
 	}
 	else {
 		cout << "\nУкажите правильно входные данные.";
